@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'FrontendController@index')->name('frontend.index');
+Route::get('landing', 'FrontendController@landing')->name('frontend.landing');
+Route::post('landing', 'FrontendController@landingSubmit')->name('frontend.landingSubmit');
